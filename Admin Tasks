@@ -242,9 +242,9 @@ nano hdfs-site.xml
 
 hadoop version
 
-hadoop fs -du hdfs:/  -------------disk usage
+hadoop dfs -du hdfs:/  -------------disk usage
 
-hadoop fs -count hdfs:/ --------- file count
+hadoop dfs -count hdfs:/ --------- file count
 
 
 ----**** Setting Replication for a dataset ----*****
