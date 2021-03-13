@@ -113,11 +113,11 @@ $ sudo mkdir -p /var/www/html/cloudera-repos/cm6
 
 ----*** Download the Cloudera Manager Repo tarball ***----
 
-$ wget tarball
+$ wget tarball (upload tarball to s3 and give public access and then use wget)
 
-$ sudo tar xvfz cm5.13.3-ubuntu16-04.tar.gz -C /var/www/html/cloudera-repos/cm5 --strip-components=1
+$ sudo tar xvfz cm5.13.3-ubuntu16-04.tar.gz -C /var/www/html/cloudera-repos/cm6 --strip-components=1  (use if not done by this , sudo mv cm5.13.3-ubuntu16-04.tar.gz /var/www/html/cloudera-repos/cm6)
 
-$ sudo chmod -R ugo+rX /var/www/html/cloudera-repos/cm5
+$ sudo chmod -R ugo+rX /var/www/html/cloudera-repos/cm6
 
 ----*** Seting up internal repository ***----
 
