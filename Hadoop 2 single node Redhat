@@ -2,7 +2,7 @@ connect to server
 ssh -i key.pem ec2-user@public ip
 
 send key to server 
-scp -i key.pe key.pem ec2-user@public ip:~/.ssh
+scp -i key.pem key.pem ec2-user@public ip:~/.ssh
 
 # Install Java
 sudo yum update
@@ -13,8 +13,8 @@ java -version
 sudo groupadd hadoop                                               /  if you add another user suppose hduser         
 sudo useradd ec2-user                                              / sudo useradd hduser
 sudo usermod -a -G hadoop ec2-user                                 / sudo usermod -a -G hadoop hduser
-                                                                   /  useradd -G wheel hduser
-sudo su ec2-user                                                   /  sudo su hduser
+sudo su ec2-user                                                  /  useradd -G wheel hduser
+                                                                   /  sudo su hduser
 
 #Install SSH
 sudo dnf install openssh-server
