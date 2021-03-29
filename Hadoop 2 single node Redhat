@@ -43,7 +43,7 @@ sudo mv hadoop-3.2.1 /usr/local/hadoop
 sudo chown ec2-user:hadoop -R /usr/local/hadoop
 
 # Set Enviornment Variable
-readlink -f $(which java)-
+readlink -f $(which java)
 nano ~/.bashrc
 
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
