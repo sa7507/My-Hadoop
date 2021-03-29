@@ -10,11 +10,11 @@ sudo yum install java-1.8.0-openjdk-devel
 java -version
 
 #Create a Hadoop user for accessing HDFS and MapReduce
-sudo groupadd hadoop                                                 if you add another user suppose hduser         
-sudo useradd ec2-user                                                sudo useradd hduser
-sudo usermod -a -G hadoop ec2-user                                   sudo usermod -a -G hadoop hduser
-                                                                     useradd -G wheel hduser
-sudo su ec2-user                                                     sudo su hduser
+sudo groupadd hadoop                                               /  if you add another user suppose hduser         
+sudo useradd ec2-user                                              / sudo useradd hduser
+sudo usermod -a -G hadoop ec2-user                                 / sudo usermod -a -G hadoop hduser
+                                                                   /  useradd -G wheel hduser
+sudo su ec2-user                                                   /  sudo su hduser
 
 #Install SSH
 sudo dnf install openssh-server
