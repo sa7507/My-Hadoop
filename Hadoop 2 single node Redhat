@@ -1,9 +1,6 @@
 connect to server
 ssh -i key.pem ec2-user@public ip
 
-send key to server 
-scp -i key.pem key.pem ec2-user@public ip:~/.ssh
-
 # Install Java
 sudo yum update
 sudo yum install java-1.8.0-openjdk-devel
