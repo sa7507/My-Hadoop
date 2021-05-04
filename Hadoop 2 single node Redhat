@@ -63,7 +63,7 @@ vi hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
 export HADOOP_LOG_DIR=/var/log/hadoop
 sudo mkdir /var/log/hadoop
-sudo chown hduser:hadoop -R /var/log/hadoop
+sudo chown ec2-user:hadoop -R /var/log/hadoop
 
 #Update core-site.xml
 vi core-site.xml
@@ -78,7 +78,7 @@ vi core-site.xml
 </property>
 
 sudo mkdir -p /app/hadoop/tmp
-sudo chown hduser:hadoop /app/hadoop/tmp
+sudo chown ec2-user:hadoop /app/hadoop/tmp
 
 
 #Update mapred-site.xml
@@ -97,7 +97,7 @@ vi mapred-site.xml
 #Update hdfs-site.xml
 sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
 sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
-sudo chown -R hduser:hadoop /usr/local/hadoop_store
+sudo chown -R ec2-user:hadoop /usr/local/hadoop_store
 vi hdfs-site.xml
 <property> 
 <name>dfs.replication</name>
