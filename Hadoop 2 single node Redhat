@@ -41,7 +41,7 @@ sudo chown ec2-user:hadoop -R /usr/local/hadoop
 
 # Set Enviornment Variable
 readlink -f $(which java)
-nano ~/.bashrc
+vi ~/.bashrc
 
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
 export HADOOP_HOME=/usr/local/hadoop
@@ -59,14 +59,14 @@ source ~/.bashrc
 cd /usr/local/hadoop/etc/hadoop/
 
 #Update hadoop-env.sh
-nano hadoop-env.sh
+vi hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
 export HADOOP_LOG_DIR=/var/log/hadoop
 sudo mkdir /var/log/hadoop
 sudo chown hduser:hadoop -R /var/log/hadoop
 
 #Update core-site.xml
-nano core-site.xml
+vi core-site.xml
 <property>
   <name>hadoop.tmp.dir</name>
   <value>/app/hadoop/tmp</value>
@@ -83,7 +83,7 @@ sudo chown hduser:hadoop /app/hadoop/tmp
 
 #Update mapred-site.xml
 cp mapred-site.xml.template mapred-site.xml
-nano mapred-site.xml
+vi mapred-site.xml
 <property>
   <name>mapreduce.jobtracker.address</name>
   <value>localhost:54311</value>
@@ -98,7 +98,7 @@ nano mapred-site.xml
 sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
 sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
 sudo chown -R hduser:hadoop /usr/local/hadoop_store
-nano hdfs-site.xml
+vi hdfs-site.xml
 <property> 
 <name>dfs.replication</name>
   <value>1</value>
@@ -114,7 +114,7 @@ nano hdfs-site.xml
 
 
 #Update yarn-site.xml
-nano yarn-site.xml
+vi yarn-site.xml
 <property>
       <name>yarn.nodemanager.aux-services</name>
       <value>mapreduce_shuffle</value>
