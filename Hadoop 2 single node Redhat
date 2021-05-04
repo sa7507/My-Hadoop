@@ -43,7 +43,7 @@ sudo chown ec2-user:hadoop -R /usr/local/hadoop
 readlink -f $(which java)
 vi ~/.bashrc
 
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64                      
 export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
@@ -60,7 +60,7 @@ cd /usr/local/hadoop/etc/hadoop/
 
 #Update hadoop-env.sh
 vi hadoop-env.sh
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-2.el8_3.x86_64                       (  Note: everytime java_home size changes so do changes accordingly)
 export HADOOP_LOG_DIR=/var/log/hadoop
 sudo mkdir /var/log/hadoop
 sudo chown ec2-user:hadoop -R /var/log/hadoop
